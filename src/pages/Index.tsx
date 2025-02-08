@@ -2,6 +2,8 @@
 import HeroSection from "@/components/HeroSection";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsSection from "@/components/SkillsSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const projects = [
@@ -33,20 +35,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <HeroSection />
-      
-      <SkillsSection />
-      
-      <section id="projects" className="py-20 px-4">
-        <div className="container max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
+      <div className="relative">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 pointer-events-none" />
+        
+        {/* Content */}
+        <div className="relative">
+          <HeroSection />
+          
+          <div className="space-y-20">
+            <SkillsSection />
+            
+            <section id="projects" className="py-20 px-4">
+              <div className="container max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {projects.map((project) => (
+                    <ProjectCard key={project.title} {...project} />
+                  ))}
+                </div>
+              </div>
+            </section>
+            
+            <ContactSection />
           </div>
+          
+          <Footer />
         </div>
-      </section>
+      </div>
     </div>
   );
 };
