@@ -1,13 +1,13 @@
 
 import { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, FileDown } from "lucide-react";
 
 const HeroSection = () => {
   const textRef = useRef<HTMLSpanElement>(null);
   
   useEffect(() => {
-    const texts = ["Web Developer", "Problem Solver", "UI/UX Enthusiast"];
+    const texts = ["Full-Stack Engineer", "System Architect", "Problem Solver"];
     let currentIndex = 0;
     let currentText = "";
     let isDeleting = false;
@@ -46,25 +46,36 @@ const HeroSection = () => {
     projectsSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-      <div className="text-center animate-fade-up space-y-6">
-        <span className="text-sm uppercase tracking-wider text-muted-foreground">Welcome to my portfolio</span>
-        <h1 className="text-4xl md:text-6xl font-bold">
-          Hi, I'm <span className="text-primary">Your Name</span>
+    <section className="min-h-screen flex flex-col items-center justify-center relative px-4 bg-gradient-to-br from-background to-secondary/20">
+      <div className="text-center animate-fade-up space-y-6 max-w-3xl">
+        <span className="text-sm uppercase tracking-wider text-muted-foreground font-semibold">Senior Software Engineer</span>
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          Hi, I'm <span className="text-primary gradient-text">Bonface Odhiambo</span>
         </h1>
         <div className="h-8">
-          <span ref={textRef} className="text-2xl md:text-3xl text-muted-foreground"></span>
+          <span ref={textRef} className="text-2xl md:text-3xl text-muted-foreground font-medium"></span>
         </div>
-        <p className="max-w-lg mx-auto text-muted-foreground">
-          With 3 years of experience crafting digital experiences, I bring ideas to life through clean code and intuitive design.
+        <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
+          With extensive experience in both high-level and low-level systems, I specialize in developing scalable solutions and optimizing system performance across the entire technology stack.
         </p>
-        <div className="flex gap-4 justify-center pt-4">
-          <Button onClick={scrollToProjects} className="group">
+        <div className="flex flex-wrap gap-4 justify-center pt-6">
+          <Button onClick={scrollToProjects} size="lg" className="group">
             View My Work
             <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
           </Button>
-          <Button variant="outline">Contact Me</Button>
+          <Button variant="outline" size="lg" onClick={scrollToContact}>
+            Contact Me
+          </Button>
+          <Button variant="secondary" size="lg">
+            <FileDown className="mr-2 h-4 w-4" />
+            Resume
+          </Button>
         </div>
       </div>
       
