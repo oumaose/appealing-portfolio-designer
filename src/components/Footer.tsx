@@ -33,7 +33,7 @@ const Footer = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="hover:text-primary hover:bg-secondary/50">
-                <a href="mailto:bonface@example.com" aria-label="Email">
+                <a href="mailto:principalresearcher138@gmail.com" aria-label="Email">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
