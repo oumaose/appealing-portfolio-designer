@@ -23,12 +23,12 @@ const Footer = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="hover:text-primary hover:bg-secondary/50">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/bonfaceodhiambo-96a6a3174" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="hover:text-primary hover:bg-secondary/50">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <a href="https://x.com/odhiambookello5" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <Twitter className="h-5 w-5" />
                 </a>
               </Button>
@@ -74,7 +74,7 @@ const Footer = () => {
             </p>
             <Button variant="outline" className="flex items-center gap-2">
               <FileDown className="h-4 w-4" />
-              <a href="/resume-bonface-odhiambo.pdf" download>
+              <a href="/bonface-odhiambo-resume.pdf" download>
                 Download CV
               </a>
             </Button>
