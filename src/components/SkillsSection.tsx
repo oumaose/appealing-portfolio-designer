@@ -5,27 +5,27 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Database, Server, Layers, Cpu, Terminal } from "lucide-react";
 
 const skills = [
-  { name: "Frontend Development", level: 90, category: "frontend" },
-  { name: "React & TypeScript", level: 92, category: "frontend" },
-  { name: "UI/UX Engineering", level: 85, category: "frontend" },
-  { name: "Next.js & Modern Frameworks", level: 88, category: "frontend" },
+  { name: "Java Development", level: 95, category: "backend" },
+  { name: "Spring Boot & Spring Cloud", level: 94, category: "backend" },
+  { name: "Microservices Architecture", level: 92, category: "backend" },
+  { name: "JPA/Hibernate", level: 90, category: "backend" },
   
-  { name: "Python Development", level: 94, category: "backend" },
-  { name: "Java/Spring Boot", level: 90, category: "backend" },
-  { name: "Node.js/Express", level: 88, category: "backend" },
-  { name: "Database Architecture", level: 89, category: "backend" },
+  { name: "Frontend Development", level: 85, category: "frontend" },
+  { name: "React & TypeScript", level: 83, category: "frontend" },
+  { name: "UI/UX Engineering", level: 80, category: "frontend" },
+  { name: "Next.js & Modern Frameworks", level: 82, category: "frontend" },
   
   { name: "System Architecture", level: 87, category: "systems" },
-  { name: "Linux/UNIX Systems", level: 92, category: "systems" },
-  { name: "Kernel Development", level: 85, category: "systems" },
-  { name: "Distributed Systems", level: 83, category: "systems" },
+  { name: "Linux/UNIX Systems", level: 88, category: "systems" },
+  { name: "DevOps & CI/CD", level: 89, category: "systems" },
+  { name: "Distributed Systems", level: 85, category: "systems" },
 ];
 
 const technologies = [
-  "React", "TypeScript", "Python", "Java", "C/C++", "Node.js", 
-  "Spring Boot", "PostgreSQL", "MongoDB", "Redis", "Docker", 
-  "Kubernetes", "AWS", "GCP", "Linux Kernel", "gRPC", 
-  "WebSockets", "GraphQL", "eBPF", "System Programming"
+  "Java", "Spring Boot", "Spring Cloud", "Hibernate", "JPA", 
+  "Microservices", "Docker", "Kubernetes", "Maven", "Gradle",
+  "JUnit", "React", "TypeScript", "AWS", "Jenkins", 
+  "PostgreSQL", "MongoDB", "Redis", "REST APIs", "GraphQL"
 ];
 
 const SkillsSection = () => {
@@ -59,20 +59,20 @@ const SkillsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Technical Expertise</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            With a comprehensive background spanning frontend, backend, and system-level development,
-            I bring a holistic approach to solving complex technical challenges.
+            As a specialized Java and Spring Boot developer, I bring deep expertise in enterprise-grade
+            application development, microservices architecture, and robust backend systems.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
-              <Code className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold gradient-text">Frontend Development</h3>
+              <Server className="h-6 w-6 text-primary" />
+              <h3 className="text-xl font-semibold gradient-text">Java & Spring Ecosystem</h3>
             </div>
             <div className="space-y-6">
               {skills
-                .filter((skill) => skill.category === "frontend")
+                .filter((skill) => skill.category === "backend")
                 .map((skill, index) => (
                   <div
                     key={skill.name}
@@ -98,12 +98,12 @@ const SkillsSection = () => {
           
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
-              <Server className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold gradient-text">Backend Development</h3>
+              <Code className="h-6 w-6 text-primary" />
+              <h3 className="text-xl font-semibold gradient-text">Frontend Development</h3>
             </div>
             <div className="space-y-6">
               {skills
-                .filter((skill) => skill.category === "backend")
+                .filter((skill) => skill.category === "frontend")
                 .map((skill, index) => (
                   <div
                     key={skill.name}

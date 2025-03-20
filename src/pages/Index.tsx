@@ -8,50 +8,50 @@ import Footer from "@/components/Footer";
 const Index = () => {
   const projects = [
     {
-      title: "Enterprise E-Commerce Platform",
-      description: "A scalable full-stack e-commerce solution with real-time inventory management, built with React, Node.js, and Python microservices. Implemented advanced caching strategies and optimized database queries for 300% performance improvement.",
+      title: "Enterprise Microservices Platform",
+      description: "A scalable microservices architecture built with Spring Boot and Spring Cloud, featuring service discovery, gateway routing, and distributed configuration. Implemented circuit breaking patterns and achieved 99.9% service uptime.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      technologies: ["React", "Python", "Node.js", "MongoDB", "Redis"],
+      technologies: ["Java", "Spring Boot", "Spring Cloud", "Docker", "Kubernetes"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
-      title: "System Performance Monitor",
-      description: "Low-level system monitoring tool developed in C++ and Python, providing real-time metrics for CPU, memory, and I/O operations with kernel module integration. Features custom visualization dashboards and anomaly detection algorithms.",
+      title: "Banking API System",
+      description: "Developed a secure banking API system using Spring Security with OAuth2 and JWT authentication. Built RESTful services with comprehensive documentation using Swagger and implemented robust error handling with global exception controllers.",
       image: "https://images.unsplash.com/photo-1551033541-2075d8363c66",
-      technologies: ["C++", "Python", "Linux Kernel", "SystemTap"],
+      technologies: ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "Hibernate"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
-      title: "Custom Linux Kernel Module",
-      description: "Developed a custom kernel module for enhanced system security and process monitoring, implementing syscall hooks and memory protection. Successfully prevented several types of buffer overflow attacks and rootkit installations.",
+      title: "Real-time Notification Service",
+      description: "Engineered a high-throughput notification service using Spring WebFlux and Project Reactor for reactive programming. Integrated with message brokers for event-driven architecture and supported multiple delivery channels.",
       image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97",
-      technologies: ["C", "Linux Kernel", "Assembly", "System Programming"],
+      technologies: ["Java", "Spring Boot", "WebFlux", "RabbitMQ", "MongoDB"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
       title: "Cloud-Based Task Management",
-      description: "Enterprise task management system with real-time collaboration features, implemented using Java Spring Boot and React. Supports complex workflow automation and integrates with various third-party services via custom API gateways.",
+      description: "Enterprise task management system with Spring Boot backend and React frontend. Implemented complex business logic with workflow engines and integrated with cloud services using AWS SDK and Spring Cloud AWS.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       technologies: ["Java", "Spring Boot", "React", "PostgreSQL", "AWS"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
-      title: "Distributed System Monitor",
-      description: "Advanced monitoring solution for distributed systems, featuring custom protocols and real-time data analysis using eBPF technology. Deployed in production environments monitoring over 500 nodes with minimal overhead.",
+      title: "E-Commerce Microservices Suite",
+      description: "Comprehensive e-commerce solution built with domain-driven design principles using Spring Boot microservices. Implemented event sourcing with Apache Kafka for inter-service communication and cache synchronization.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
-      technologies: ["Go", "eBPF", "Python", "Kubernetes", "Prometheus"],
+      technologies: ["Java", "Spring Boot", "Kafka", "Redis", "Elasticsearch"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
-      title: "AI-Powered Portfolio Generator",
-      description: "Automated portfolio generator using machine learning to analyze and showcase developer projects effectively. Uses natural language processing to extract key features from code repositories and presents them in a visually appealing format.",
+      title: "DevOps Automation Platform",
+      description: "CI/CD automation platform with Jenkins pipelines integration, built with Spring Boot. Features include automated code quality checks, containerization with Docker, and deployment to Kubernetes clusters.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      technologies: ["Python", "TensorFlow", "Next.js", "GraphQL"],
+      technologies: ["Java", "Spring Boot", "Jenkins", "Docker", "Kubernetes"],
       githubUrl: "#",
       liveUrl: "#",
     },
@@ -75,8 +75,8 @@ const Index = () => {
                 <div className="text-center mb-12">
                   <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
                   <p className="text-muted-foreground max-w-2xl mx-auto">
-                    A selection of my most significant work, showcasing technical skills across various domains
-                    from frontend applications to low-level system implementations.
+                    A selection of my most significant work, showcasing expertise in Java, Spring Boot, and enterprise application development
+                    from microservices to full-stack solutions.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

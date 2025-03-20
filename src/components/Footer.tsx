@@ -12,9 +12,9 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Bonface Odhiambo</h3>
             <p className="text-muted-foreground mb-4">
-              Senior Software Engineer specializing in full-stack development 
-              and systems engineering with expertise in building scalable 
-              applications and optimizing system performance.
+              Java & Spring Boot Engineer specializing in enterprise application 
+              development with expertise in building scalable microservices 
+              and cloud-native applications.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="hover:text-primary hover:bg-secondary/50">
@@ -69,8 +69,8 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Resume</h3>
             <p className="text-muted-foreground mb-6">
-              Download my detailed resume to learn more about my experience, 
-              skills, and professional background.
+              Download my detailed resume to learn more about my experience with
+              Java, Spring Boot, and enterprise application development.
             </p>
             <Button variant="outline" className="flex items-center gap-2">
               <FileDown className="h-4 w-4" />
