@@ -2,7 +2,7 @@
 import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Server, Layers, Cpu, Terminal, Python, React, Javascript } from "lucide-react";
+import { Code, Database, Server, Layers, Cpu, Terminal, BarChart, Globe, Hammer } from "lucide-react";
 
 const skills = [
   { name: "Java Development", level: 95, category: "backend" },
@@ -104,7 +104,7 @@ const SkillsSection = () => {
           
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
-              <React className="h-6 w-6 text-primary" />
+              <Globe className="h-6 w-6 text-primary" />
               <h3 className="text-xl font-semibold gradient-text">MERN Stack</h3>
             </div>
             <div className="space-y-6">
@@ -135,7 +135,7 @@ const SkillsSection = () => {
           
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
-              <Python className="h-6 w-6 text-primary" />
+              <BarChart className="h-6 w-6 text-primary" />
               <h3 className="text-xl font-semibold gradient-text">Python</h3>
             </div>
             <div className="space-y-6">
