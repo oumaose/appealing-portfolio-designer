@@ -2,7 +2,7 @@
 import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Server, Layers, Cpu, Terminal } from "lucide-react";
+import { Code, Database, Server, Layers, Cpu, Terminal, Python, React, Javascript } from "lucide-react";
 
 const skills = [
   { name: "Java Development", level: 95, category: "backend" },
@@ -10,10 +10,15 @@ const skills = [
   { name: "Microservices Architecture", level: 92, category: "backend" },
   { name: "JPA/Hibernate", level: 90, category: "backend" },
   
-  { name: "Frontend Development", level: 85, category: "frontend" },
-  { name: "React & TypeScript", level: 83, category: "frontend" },
-  { name: "UI/UX Engineering", level: 80, category: "frontend" },
-  { name: "Next.js & Modern Frameworks", level: 82, category: "frontend" },
+  { name: "MERN Stack", level: 88, category: "mern" },
+  { name: "React & Redux", level: 87, category: "mern" },
+  { name: "Node.js & Express", level: 86, category: "mern" },
+  { name: "MongoDB", level: 85, category: "mern" },
+  
+  { name: "Python Development", level: 89, category: "python" },
+  { name: "Django/Flask", level: 87, category: "python" },
+  { name: "Data Analysis (Pandas/NumPy)", level: 85, category: "python" },
+  { name: "Machine Learning Libraries", level: 82, category: "python" },
   
   { name: "System Architecture", level: 87, category: "systems" },
   { name: "Linux/UNIX Systems", level: 88, category: "systems" },
@@ -24,8 +29,9 @@ const skills = [
 const technologies = [
   "Java", "Spring Boot", "Spring Cloud", "Hibernate", "JPA", 
   "Microservices", "Docker", "Kubernetes", "Maven", "Gradle",
-  "JUnit", "React", "TypeScript", "AWS", "Jenkins", 
-  "PostgreSQL", "MongoDB", "Redis", "REST APIs", "GraphQL"
+  "React", "Node.js", "Express", "MongoDB", "Redux",
+  "Python", "Django", "Flask", "Pandas", "NumPy", 
+  "PostgreSQL", "AWS", "Jenkins", "REST APIs", "GraphQL"
 ];
 
 const SkillsSection = () => {
@@ -59,16 +65,16 @@ const SkillsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Technical Expertise</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            As a specialized Java and Spring Boot developer, I bring deep expertise in enterprise-grade
-            application development, microservices architecture, and robust backend systems.
+            As a specialized Java and Spring Boot developer with additional expertise in MERN stack and Python,
+            I build robust enterprise applications, scalable microservices, and modern full-stack solutions.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <Server className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold gradient-text">Java & Spring Ecosystem</h3>
+              <h3 className="text-xl font-semibold gradient-text">Java & Spring</h3>
             </div>
             <div className="space-y-6">
               {skills
@@ -98,12 +104,43 @@ const SkillsSection = () => {
           
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
-              <Code className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold gradient-text">Frontend Development</h3>
+              <React className="h-6 w-6 text-primary" />
+              <h3 className="text-xl font-semibold gradient-text">MERN Stack</h3>
             </div>
             <div className="space-y-6">
               {skills
-                .filter((skill) => skill.category === "frontend")
+                .filter((skill) => skill.category === "mern")
+                .map((skill, index) => (
+                  <div
+                    key={skill.name}
+                    className={`transform transition-all duration-500 ${
+                      show
+                        ? "translate-x-0 opacity-100"
+                        : "translate-x-[50px] opacity-0"
+                    }`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-muted-foreground">{skill.level}%</span>
+                    </div>
+                    <Progress
+                      value={show ? skill.level : 0}
+                      className="transition-all duration-1000"
+                    />
+                  </div>
+                ))}
+            </div>
+          </div>
+          
+          <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
+            <div className="flex items-center gap-3 mb-6">
+              <Python className="h-6 w-6 text-primary" />
+              <h3 className="text-xl font-semibold gradient-text">Python</h3>
+            </div>
+            <div className="space-y-6">
+              {skills
+                .filter((skill) => skill.category === "python")
                 .map((skill, index) => (
                   <div
                     key={skill.name}
@@ -130,7 +167,7 @@ const SkillsSection = () => {
           <div className="bg-card/50 p-8 rounded-xl border border-border/50 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <Cpu className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold gradient-text">Systems Engineering</h3>
+              <h3 className="text-xl font-semibold gradient-text">Systems</h3>
             </div>
             <div className="space-y-6">
               {skills
